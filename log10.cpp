@@ -101,7 +101,7 @@ void clog10_24b (uint32_t x)
 	if ((x & 0xFF0000) == 0) { x <<=  8; y -= normf[1]; yi -= normi[1]; }
 	if ((x & 0xF00000) == 0) { x <<=  4; y -= normf[2]; yi -= normi[2]; }
 	if ((x & 0xC00000) == 0) { x <<=  2; y -= normf[3]; yi -= normi[3]; }
-	if ((x & 0x100000) == 0) { x <<=  1; y -= normf[4]; yi -= normi[4]; }
+	if ((x & 0x800000) == 0) { x <<=  1; y -= normf[4]; yi -= normi[4]; }
 
 	// run rounds
 	for (int round = 0; round < ROUNDS; round++) {
